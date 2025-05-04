@@ -2,17 +2,17 @@ Link for full access of Brain Tumor Classification project: https://drive.google
 
 This study introduces three distinct models: RADNet, ViT, and a hybrid model that synthesizes features from both architectures. Comprehensive exploratory data analysis (EDA), preprocessing, and data augmentation strategies were employed to address class imbalance and optimize data quality. Through meticulous hyperparameter tuning using Keras Tuner's Hyperband, the models achieved remarkable accuracy and precision in distinguishing between glioma, meningioma, pituitary tumors, and healthy brain tissues. The RADNet model excelled, attaining a precision of 0.99 and an accuracy rate of 99% on augmented datasets, underscoring its superior performance and robustness. Conversely, the Vision Transformer (ViT) model achieved an accuracy of 89%, highlighting the necessity for extensive datasets to harness its full potential. The hybrid model demonstrated a balanced accuracy of 98% and an F1 score of 0.98, effectively combining the strengths of CNNs and transformers.
 
-# Models implemented:
+### Models implemented:
 
 - RADNet
 - ViT (Vision Transfomer)
 - Hybrid (RADNet + ViT)
 
-# Dataset Characteristics
+### Dataset Characteristics
 
 Brain Tumor Classification (MRI) Dataset consists of images T-1 weighted MRI Scans with the same JPG type file varies in resolution, size and dimension (via manual inspection). Data is highly unbalanced in Training Dataset due to no_tumor pertaining only 395 files whilst the remnant subfolders procuring approximately 800 files each within Training Dataset. no_tumor should be modified to be converted into balance dataset afore venturing latter phase of employing classification models onto dataset.
 
-# Data Pre-processing
+### Data Pre-processing
 
 Data Pre-processing of medical images, specifically T1-weighted MRI scans of brain tumors; glioma, meningioma, pituitary and no tumor aims to classify into four classes. The data collected from Kaggle for classification models are in image format JPG or JPEG Files (.jpg). This method is critical for enhancing the accuracy of deep learning models. This section illustrates the methods employed for preprocessing, including image augmentation, cropping, and resizing. These steps ensure that the images are standardized and augmented to improve the robustness of the classification models as the data is unclean. Notably, additional input of multiplying the no_tumor class within Training set by 28 instead of 14 as no_tumor class amount of data is relatively low.
 
